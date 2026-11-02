@@ -1,7 +1,7 @@
 # Style Guide for Coding
 This style is meant to provide the rules and conventions that I use in my coding practice. I aim for consistency as well as transparency. There will be language specifics for **R** and **Python**.
 
-Further references can be found under (https://peps.python.org/pep-0008/)[Python], (https://google.github.io/styleguide/Rguide.html)[Google-R],  (https://style.tidyverse.org/)[Tidyverse]
+Further references can be found under [Python]([Python](https://peps.python.org/pep-0008/)), [Google-R](https://google.github.io/styleguide/Rguide.html),  [Tidyverse](https://style.tidyverse.org/)
 
 # Files
 File names use lower-case characters and underscores as seperators, so that they are machine readable. Sequential files can be numbered either with 1_..., 2_..., or if there are many files expexted 01_..., 02_..., 03_....
@@ -23,7 +23,7 @@ data.py
 use commented lines of ```-``` and ```=``` to break up your file into easily readable chunks. Ideally, combine with numbering and number of comments to indicate the leel
 
 
-```{R}
+```R
 # 1. Load data ============================
 
 ## 1.1. Load population data -------------
@@ -32,7 +32,6 @@ use commented lines of ```-``` and ```=``` to break up your file into easily rea
 ## 1.2. Load birth counts ----------------
 
 ## 2. Combine population and birht data ===
-
 
 ```
 

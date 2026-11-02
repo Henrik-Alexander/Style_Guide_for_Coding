@@ -6,6 +6,10 @@
 # Date: date when the file was created
 ###
 
+# List folders
+folders <- c("raw", "code", "data", "text", "documentation", "results")
 
+# Create the folders in the current working directory
+lapply(folders, function(folder_name) if (!dir.exists(folder_name)) dir.create(folder_name))
 
 ### END ######################################################

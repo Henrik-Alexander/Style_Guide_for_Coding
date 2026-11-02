@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Style Guide for Coding</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <span id="markdown-mermaid" aria-hidden="true" data-config="{&quot;darkModeTheme&quot;:&quot;vscode&quot;,&quot;lightModeTheme&quot;:&quot;vscode&quot;,&quot;maxTextSize&quot;:50000,&quot;clickDrag&quot;:&quot;alt&quot;,&quot;showControls&quot;:&quot;onHoverOrFocus&quot;,&quot;resizable&quot;:true,&quot;maxHeight&quot;:&quot;&quot;}"></span>
+				<h1 id="style-guide-for-coding">Style Guide for Coding</h1>
+<p>This style is meant to provide the rules and conventions that I use in my coding practice. I aim for consistency as well as transparency. There will be language specifics for <strong>R</strong> and <strong>Python</strong>.</p>
+<p>Further references can be found under (<a href="https://peps.python.org/pep-0008/">https://peps.python.org/pep-0008/</a>)[Python], (<a href="https://google.github.io/styleguide/Rguide.html">https://google.github.io/styleguide/Rguide.html</a>)[Google-R], Tidyverse R Style guide (<a href="https://style.tidyverse.org/">https://style.tidyverse.org/</a>)[Tidyverse]</p>
+<h1 id="code-lay-out">Code lay-out</h1>
+<h2 id="indentation">Indentation</h2>
+<p>I will use 1 tab per indentation level.</p>
+<h2 id="maximum-line-length">Maximum Line length</h2>
+<p>I aim for 79 characters per line.</p>
+<h2 id="blank-lines">Blank Lines</h2>
+<h2 id="whitespace-in-expression-and-statements">Whitespace in Expression and Statements</h2>
+<h2 id="naming-convention">Naming convention</h2>
+<ul>
+<li><em>Functions:</em> usually start with a verb that describes the activity that the function executes:
+<ul>
+<li>trans_...: transform a variable into another</li>
+<li>calc_...: calculate a composite measure</li>
+<li>plot_...: any plotting function</li>
+<li>pivot_...: reshape a data structure into another format</li>
+</ul>
+</li>
+<li><em>Objects</em>: usually use nouns to illustrate the object type
+<ul>
+<li>pop_...: population countrs, subgroups are indicated through the paranthetes (pop_2010), (pop_f), (pop_oslo)</li>
+<li>births_..., deaths_..., moves_..., emigr_, immigr_...: event counts of birth, deaths, emigrations, immigrations</li>
+<li></li>
+</ul>
+</li>
+</ul>
+
+            
+            
+        </body>
+        </html>
